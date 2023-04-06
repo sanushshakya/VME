@@ -6,6 +6,8 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from api.core.config import settings
 from api.api.routers import router
 from api.models.userModel import User
+from api.models.categoriesModel import Categories
+from api.models.eventsModel import Events
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -21,6 +23,8 @@ async def startup_db_client():
         database = db_client,
         document_models= [
             User,
+            Categories,
+            Events
         ]
     )
 
