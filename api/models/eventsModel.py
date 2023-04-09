@@ -9,7 +9,7 @@ class Events(Document):
     title: Indexed(str, unique = True)
     description: str
     date: str
-    type: Categories
+    category: Categories
     organiser: str
 
     @property

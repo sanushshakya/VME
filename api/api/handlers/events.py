@@ -6,7 +6,7 @@ from api.services.eventsServices import EventsServices
 evtRouter = APIRouter()
 
 @evtRouter.get("/read")
-async def readUser(title: str):
+async def readEvent(title: str):
     try:
         return await EventsServices.readEvents(title)
     except:
@@ -24,3 +24,14 @@ async def createEvent(data: EventsIn):
             status_code = status.HTTP_400_BAD_REQUEST,
             detail = "Event already exists."
         )
+
+@evtRouter.get("/read_by_category")
+async def readEventByCategory(category: str):
+    try:
+        return await EventsServices.readEventsbyCategory(category)
+    except:
+        raise HTTPException(
+            status_code = status.HTTP_404_NOT_FOUND,
+            detail = "Event not found"
+        )
+
