@@ -9,7 +9,7 @@ class Categories(Document):
     cat_id: UUID = Field(default_factory=uuid4)
     title: Indexed(str, unique = True)
     description: str
-    events_list: List[str]
+    events_list: List
 
     @property
     def create(self) -> datetime:
