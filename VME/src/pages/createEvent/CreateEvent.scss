@@ -1,0 +1,101 @@
+.createEvent{
+    margin: 50px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        h3{
+            color: #138E9A;
+            font-size: 3rem;
+            width: 30%;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .bottom{
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                .credentials{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                    span{
+                       display: flex;
+                       gap: 50px;
+                       input{
+                            border: 1px solid #138E9A;
+                            padding: 15px 80px;
+                            border-radius: 20px;
+                            font-size: 1.2rem;
+                       }
+                       select{
+                            border: 1px solid #138E9A;
+                            width: 35%;
+                            background-color: #fff;
+                            text-align: center;
+                       }
+                    }
+                    .error-message{
+                        color: #F47174;
+                        font-size: 1.5rem;
+                    }
+                }
+                button{
+                    border: none;
+                    padding: 10px;
+                    width: 25%;
+                    background-color: #138E9A;
+                    font-size: 1.2rem;
+                    color: #fff;
+                    border-radius: 30px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        .right{
+            img{
+                object-fit: cover;
+                height: 800px;
+                width: 600px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px){
+    .createEvent{
+        margin: 20px;
+        .container{
+            h3{
+                width: 100%;
+            }
+            .bottom{
+                form{
+                    .credentials{
+                        span{
+                           flex-direction: column;
+                           select{
+                                width: 100%;
+                                padding: 15px;
+                                border-radius: 20px;
+                                font-size: 1rem;
+                                text-align: center;
+                           }
+                        }
+                    }
+                }
+            }
+            .right{
+                img{
+                    display: none;
+                }
+            }
+        }
+    }
+}

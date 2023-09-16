@@ -1,0 +1,178 @@
+.event{
+    margin: 50px 50px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .top{
+            display: flex;
+            justify-content: space-around;
+            .left{
+                display: flex;
+                flex-direction: column;
+                gap: 100px;
+                h1{
+                    color: #138E9A;
+                    font-size: 3rem;
+                   
+                }
+                h4{
+                    font-size: 1.5rem;
+                    
+                    span{
+                        color:#138E9A;
+                        margin-left: 50px;
+                    }
+                }
+                .btn{
+                    display: flex;
+                    gap: 20px;
+                    span{
+                        color: #138E9A;
+                        font-size: 2rem;
+                    }
+                    button{
+                        background-color: #138E9A;
+                        border: none;
+                        color: white;
+                        padding: 10px 42px;
+                        text-align: center;
+                        font-size: 1rem;
+                        border-radius: 32px;
+                        cursor: pointer;
+                    }  
+                }
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                    span{
+                        border: solid 1px #138E9A;
+                        border-radius: 20px;
+                        input{
+                            padding: 20px 80px;
+                            border: none;
+                            border-radius: 20px;
+                            color: #138E9A;
+                            font-size: large;
+                        }
+                    }
+                    button{
+                        background-color: #138E9A;
+                        border: none;
+                        color: white;
+                        padding: 10px 42px;
+                        text-align: center;
+                        font-size: 1rem;
+                        border-radius: 32px;
+                        cursor: pointer;
+                    } 
+                }
+            }
+            .right{
+                .cover{
+                    img{
+                        object-fit: cover;
+                        height: 500px;
+                    }
+                }
+                .other{
+                    display: flex;
+                    gap: 50px;
+                    button{
+                        background-color: #138E9A;
+                        border: none;
+                        color: white;
+                        padding: 10px 42px;
+                        text-align: center;
+                        font-size: 1rem;
+                        border-radius: 32px;
+                        cursor: pointer;
+                    }  
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            h3{
+                color: #138E9A;
+                font-size: 2rem;
+            }
+            .evtDetail{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                gap: 50px;
+                p{  
+                    text-align: justify;
+                    font-size: 1.5rem;
+                    width: 95%;
+                }
+            }
+            .evtGallery{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                
+                .images{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 100px;
+                    img{
+                        object-fit: cover;
+                        height: 200px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .event{
+        margin: 0;
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            .top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .right{
+                    .cover{
+                        img{
+                            object-fit: cover;
+                            height: auto;
+                            width: 100%;
+                        }
+                    }
+                    .other{
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .bottom{
+                display: flex;
+                flex-direction: column;
+                margin: 0 20px;
+                .evtDetail{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+               
+            }
+        }
+    }
+}

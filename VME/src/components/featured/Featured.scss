@@ -1,0 +1,98 @@
+.featured{
+    margin-bottom: 100px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        .left{
+            img{
+                position: relative;
+                width: auto;
+                height: 700px;
+                object-fit: cover;
+            }
+            button{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                background-color: #138E9A;
+                padding: 20px;
+                color: #fff;
+                font-size: 1.2rem;
+                border-radius: 20px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        .right{
+            background-color: #138E9A;
+            width: 650px;
+            border: none;
+            border-radius: 50px;
+            text-align: center;
+            padding-bottom: 10px;
+
+            .heading{
+                display: flex;
+                flex-direction: column;
+                line-height: 1.5;
+                gap: 50px;
+                color: #fff;
+                padding: 150px 0 200px 0;
+
+                h1{
+                    font-weight: 700;
+                    font-size: 3rem;
+                }
+                h3{
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .featured{
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .left{
+                img{
+                    display: none;
+                }
+                button{
+                    display: none;
+                }
+            }
+            .right{
+                background-color: #138E9A;
+                width: 100%;
+                border: none;
+                border-radius: 50px;
+                text-align: center;
+                padding-bottom: 10px;
+    
+                .heading{
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 1.5;
+                    gap: 50px;
+                    color: #fff;
+                    padding: 150px 0 200px 0;
+    
+                    h1{
+                        font-weight: 700;
+                        font-size: 3rem;
+                    }
+                    h3{
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

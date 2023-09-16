@@ -1,0 +1,125 @@
+.about{
+    margin: 50px 50px;
+    .container{
+        .top{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 100px;
+            .left{
+                img{
+                    object-fit: cover;
+                    height: 600px;
+                }
+                button{
+                    background-color: #138E9A;
+                    border: none;
+                    color: white;
+                    padding: 15px 50px;
+                    text-align: center;
+                    font-size: 1rem;
+                    border-radius: 15px;
+                    cursor: pointer;
+                } 
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+                background-color: #138E9A;
+                border: none;
+                border-radius: 30px;
+                padding: 15px 0px;
+                color: #fff;
+                h3{
+                    font-size: 3rem;
+                   
+                }
+                p{
+                    font-size: 1.2rem;
+                    text-align: justify;
+                    width: 95%;
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 100px;
+            h3{
+                color: #138E9A;
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+            .cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 200px;
+                .teamCard{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    img{
+                        object-fit: cover;
+                        height: 200px;
+                        width: 200px;
+                    }
+                    .name{
+                        color: #138E9A;
+                        font-size: 1.8rem;
+                    }
+                    .desc{
+                        width: 200px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .about{
+        margin: 0 20px;
+        .container{
+            display: flex;
+            flex-direction: column;
+            .top{
+               flex-direction: column;
+                margin-bottom: 0px;
+                .left{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                     align-items: center;
+                    margin-bottom: 50px;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+                .right{
+                    margin-bottom: 50px;
+                    p{
+                        font-size: 1rem;
+                        text-align: justify;
+                    }
+                }
+            }
+            .bottom{
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0;
+                .cards{
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}

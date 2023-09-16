@@ -1,0 +1,43 @@
+.home{
+    margin: 50px;
+    .cmpTitle{
+        color: #138E9A;
+        text-align: center;
+        line-height: 2;
+        margin: 50px 0;
+    }
+    .slide-cat{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .slide-evt{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .home{
+        margin: 10px;
+        .cmpTitle{
+            color: #138E9A;
+            text-align: center;
+            line-height: 2;
+        }
+        .slide-cat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .slide-evt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+    }
+}

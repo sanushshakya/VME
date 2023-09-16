@@ -1,0 +1,86 @@
+.category{
+    margin: 50px 50px;
+    .container{
+        .top{
+            display: flex;
+            justify-content: space-between;
+            .left{
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                h3{
+                    color: #138E9A;
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    width: 80%;
+                    text-align: justify;
+                }
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                margin-bottom: 100px;
+                img{
+                    height: 600px;
+                    object-fit: cover;
+                }
+                .other{
+                    display: flex;
+                    gap: 50px;
+                    button{
+                        background-color: #138E9A;
+                        border: none;
+                        color: white;
+                        padding: 10px 42px;
+                        text-align: center;
+                        font-size: 1rem;
+                        border-radius: 32px;
+                        cursor: pointer;
+                    }  
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            h1{
+                text-align: center;
+                color: #138E9A;
+            }
+            .cards{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 150px;
+                justify-content:space-around;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .category{
+        .container{
+            .top{
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                .left{
+                    p{
+                        width: 100%;
+                        text-align: justify;
+                    }
+                }
+                .right{
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

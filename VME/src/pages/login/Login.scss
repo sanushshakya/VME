@@ -1,0 +1,198 @@
+.login{
+    margin-top: 100px;
+    margin-left: 50px;
+    .container{
+        display: flex;
+        gap: 300px;
+        .left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 100px;
+            color: #138E9A;
+            border: solid 0.5px;
+            padding: 30px;
+            border-radius: 50px;
+
+            .links{
+                font-weight: 700;
+                font-size: 48px;
+            }
+            h1{
+                font-weight: 600;
+                font-size: 40;
+            }
+            img{
+                width: auto;
+                height: 300px;
+            }
+            h3{
+                font-weight: 300;
+                font-size: 24px;
+            }
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            form{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 25%;
+                gap: 70px;
+                h1{
+                    color: #138E9A;
+                    font-weight: 500;
+                    font-size: 38px;
+                }
+                .credentials{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    span{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border: solid 1px #138E9A;
+                        width: 500px;
+                        padding-right: 20px;
+                        border-radius: 20px;
+                        color: #138E9A;
+                        font-size: x-large;
+                        input{
+                            padding: 15px 30px;
+                            border: none;
+                            border-radius: 20px;
+                            width: 100%;
+                            color: #138E9A;
+                            font-size: large;
+                        }
+                    }
+                    .error-message{
+                        border: none;
+                        color: #F47174;
+                    }
+                    .remember{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                button{
+                    background-color: #138E9A;
+                    border: none;
+                    border-radius: 20px;
+                    width: 100%;
+                    padding: 10px 30px;
+                    font-weight: 300;
+                    font-size: 18px;
+                    color: #fff;
+                }
+                .login-error{
+                    color: #138E9A;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .login{
+        margin-top: 0;
+        margin-left: 0;
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .left{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                .links{
+                    font-weight: 700;
+                    font-size: 48px;
+                }
+                h1{
+                    display: none;
+                }
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+                h3{
+                     display: none
+                }
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                margin-top: -300px;
+                margin-bottom: 100px;
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    h1{
+                        color: #138E9A;
+                        font-weight: 500;
+                        font-size: 38px;
+                    }
+                    .credentials{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        span{
+                            display: flex;
+                            justify-content: space-between;
+                            border: solid 1px #138E9A;
+                            width: 100%;
+                            padding-right: 20px;
+                            border-radius: 20px;
+                            color: #138E9A;
+                            font-size: x-large;
+                            input{
+                                padding: 15px 30px;
+                                border: none;
+                                border-radius: 20px;
+                                width: 100%;
+                                color: #138E9A;
+                                font-size: large;
+                            }
+                        }
+                        .error-message{
+                            border: none;
+                            color: #F47174;
+                        }
+                        .remember{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                        }
+                    }
+                    button{
+                        background-color: #138E9A;
+                        border: none;
+                        border-radius: 20px;
+                        width: 100%;
+                        padding: 10px 30px;
+                        font-weight: 300;
+                        font-size: 18px;
+                        color: #fff;
+                    }
+                    .login-error{
+                        color: #138E9A;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

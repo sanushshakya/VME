@@ -1,0 +1,26 @@
+.usrEvt{
+    margin: 50px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        .top{
+            h3{
+                color: #138E9A;
+                font-size: 3rem;
+            }
+        }
+        .bottom{
+            .cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            
+        }
+    }
+}
+@media only screen and (max-width: 600px){
+    .usrEvt{
+        margin: 10px;
+    }
+}

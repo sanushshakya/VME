@@ -1,0 +1,94 @@
+.footer{
+    background-color: #138E9A;
+    margin-top: 100px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        padding: 50px;
+        .top{
+            display: flex;
+            gap: 100px;
+            .item{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                color: #fff;
+                h2{
+                    font-weight: 600;
+                    font-size: 24px;
+                }
+            }
+            .links{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 300;
+                font-size: 1rem;
+                
+            }
+        }
+
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            .left{
+                font-size: 2rem;
+            }
+            .right{
+                font-size: 2rem;
+            }
+        }
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .footer{
+        .container{
+            display: flex;
+            flex-direction: column;
+            .top{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .item{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    h2{
+                        font-weight: 600;
+                        font-size: 24px;
+                    }
+                }
+                .links{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    
+                }
+            }
+    
+            .bottom{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                gap: 20px;
+                .left{
+                    font-size: 2rem;
+                }
+                .right{
+                    font-size: 2rem;
+                }
+            }
+        }
+    
+    }
+}

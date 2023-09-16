@@ -1,0 +1,117 @@
+.evtDetail{
+    margin: 50px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .top{
+            display: flex;
+            justify-content: space-between;
+            h3{
+                font-size: 3rem;
+                color: #138E9A;
+            }
+            button{
+                border: none;
+                padding: 15px 32px;
+                background-color: #138E9A;
+                font-size: 1.2rem;
+                color: #fff;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .bottom{
+            table{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border: 1px solid #138E9A;
+                padding: 10px;
+                .detail{
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #138E9A;
+                    padding: 15px 32px;
+                    width: auto;
+                    th{
+                        width: 200px;
+                        font-size: 2rem;
+                        color: #138E9A;
+
+                    }
+                }
+                .data{
+                    tr{
+                        display: flex;
+                        justify-content: space-between;
+                        td{
+                            width: 250px;
+                            text-align: center;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .tieSheet{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            h3{
+                color: #138E9A;
+                font-size: 3rem;
+            }
+            .list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 100px;
+                .match{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: #138E9A;
+                    color: #fff;
+                    padding: 25px;
+                    border: none;
+                    border-radius: 15px;
+                    width: 300px;
+                    span{
+                        display: flex;
+                        gap: 10px;
+                        font-size: 1rem;
+                    }
+                }  
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px){
+    .evtDetail{
+        margin: 20px;
+        .container{
+            .bottom{
+                table{
+                    .detail{
+                        th{
+                            font-size: 1rem;
+                        }
+                    }
+                    .data{
+                        tr{
+                            td{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

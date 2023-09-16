@@ -1,0 +1,254 @@
+.profile{
+    margin: 50px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        h3{
+            color: #138E9A;
+            font-size: 3rem;
+        }
+        
+        .top{
+            .bio{
+                display: flex;
+                gap: 100px;
+                align-items: center;
+                margin-top: 50px;
+                background-color: #138E9A;
+                border: none;
+                border-radius: 20px;
+                padding: 10px;
+                .left{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 200px;
+                    img{
+                        object-fit: cover;
+                        height: 200px;
+                        border-radius: 50%;
+                    }
+                    button{
+                        background-color: #fff;
+                        border: none;
+                        color: #138E9A;
+                        width: 100px;
+                        text-align: center;
+                        font-size: 1rem;
+                        border-radius: 15px;
+                        cursor: pointer;
+                    }
+                }
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    color: #fff;
+                    .name{
+                        font-size: 2rem;
+                    }
+                    .aboutDetail{
+                        font-size: 1.2rem;
+                    }
+                    span{
+                        display: flex;
+                        gap: 50px;
+                        button{
+                            background-color: #fff;
+                            border: none;
+                            color: #138E9A;
+                            padding: 15px 25px;
+                            text-align: center;
+                            font-size: 1rem;
+                            border-radius: 15px;
+                            cursor: pointer;
+                        }
+                        a{
+                            background-color: #fff;
+                            border: none;
+                            color: #138E9A;
+                            padding: 15px 25px;
+                            text-align: center;
+                            font-size: 1rem;
+                            border-radius: 15px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .team{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            span{
+                display: flex;
+                gap: 50px;
+                button{
+                    background-color: #138E9A;
+                    border: none;
+                    color: #fff;
+                    padding: 5px;
+                    text-align: center;
+                    font-size: 1rem;
+                    border-radius: 15px;
+                    cursor: pointer;
+                }
+            }
+            table{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border: none;
+                padding: 50px 100px;
+                background-color: #138E9A;
+                tr{
+                    th{
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }  
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                span{
+                    input{
+                        border: 1px solid #138E9A;
+                        padding: 20px 50px;
+                        border-radius: 20px;
+                        font-size: 1rem;
+                    }
+                }
+                button{
+                    background-color: #138E9A;
+                    border: none;
+                    color: #fff;
+                    padding: 5px;
+                    text-align: center;
+                    font-size: 1rem;
+                    border-radius: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            .left{
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                .heading{
+                    display: flex;
+                    gap: 50px;
+                    button{
+                        background-color: #138E9A;
+                        border: none;
+                        color: white;
+                        padding: 15px 32px;
+                        text-align: center;
+                        font-size: 1rem;
+                        border-radius: 15px;
+                        cursor: pointer;
+                    }
+                }
+                span{
+                    border: 1px solid #138E9A;
+                    padding: 15px 32px;
+                    border-radius: 20px;
+                    width: 80%;
+                }
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                    span{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border: solid 1px #138E9A;
+                        border-radius: 20px;
+                        color: #138E9A;
+                        font-size: x-large;
+                        input{
+                            padding: 5px 0;
+                            border: none;
+                            border-radius: 20px;
+                            width: 100%;
+                            color: #138E9A;
+                            font-size: large;
+                        }
+                    }
+                    button{
+                        background-color: #138E9A;
+                        border: none;
+                        color: white;
+                        padding: 15px 32px;
+                        text-align: center;
+                        font-size: 1rem;
+                        border-radius: 15px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .right{
+                img{
+                    object-fit: cover;
+                    height: 500px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px){
+    .profile{
+        margin: 20px;
+        .container{
+            flex-direction: column;
+            .top{
+                .bio{
+                    flex-direction: column;
+                    gap: 20px;
+                    .left{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0;
+                    }
+                    .right{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        span{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+            .bottom{
+                flex-direction: column;
+                .left{
+                    .heading{
+                        button{
+                            padding: 0 25px;
+                        }
+                    }
+                }
+                .right{
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

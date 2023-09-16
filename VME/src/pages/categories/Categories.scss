@@ -1,0 +1,45 @@
+.categories{
+    margin: 50px 50px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .top{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: #138E9A;
+            gap: 20px;
+            .left{
+                h1{
+                    font-weight: 600;
+                    font-size: 48px;
+                }
+                h3{
+                    font-weight: 300;
+                    font-size: 22px;
+                }
+
+            }
+            .right{
+                button{
+                    background-color: #138E9A;
+                    border: none;
+                    color: white;
+                    padding: 15px 32px;
+                    text-align: center;
+                    font-size: 1rem;
+                    border-radius: 15px;
+                    cursor: pointer;
+                }  
+            }
+        }
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 150px;
+            justify-content:space-around;
+           
+        }
+    }
+}
