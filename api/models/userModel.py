@@ -1,7 +1,8 @@
 from uuid import UUID, uuid4
-from beanie import Document, Indexed
+from beanie import Document, Indexed, PydanticObjectId
 from pydantic import Field, EmailStr
-from typing import Optional
+from typing import Optional,List
+from pymongo import IndexModel, ASCENDING
 import datetime
 
 class User(Document):
@@ -9,6 +10,10 @@ class User(Document):
     name: str
     email: Indexed(EmailStr, unique = True)
     hashed_password: str
+    team_name: Optional[str]
+    team_member: Optional[List[str]]
+    role_name: str
+    image_url: Optional[str]
 
     def __repr__(self) -> str:
         return f"<user {self.email}>"
@@ -34,3 +39,4 @@ class User(Document):
     
     class collection:
         name = "users"
+        indexes = [IndexModel([("role_name", ASCENDING)])]

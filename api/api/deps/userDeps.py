@@ -1,5 +1,5 @@
 from fastapi.security import OAuth2PasswordBearer
-from fastapi import Depends, HTTPException,status, Request
+from fastapi import Depends, HTTPException,status
 from jose import jwt
 from datetime import datetime
 from pydantic import ValidationError
@@ -10,18 +10,15 @@ from api.services.UserService import UserService
 
 
 reuseableOAuth = OAuth2PasswordBearer(
-    tokenUrl=f"{settings.APP_NAME}/auth/login",
-    scheme_name= "JWT"
+    tokenUrl = "/api/auth/login",
+    scheme_name = "jwt"
 )
 
-
-async def getCurrentUser(token: str = Depends(reuseableOAuth)) -> User:
-    print(token)
+async def getCurrentUser(token: str):
     try: 
         payload = jwt.decode(
             token, settings.JWT_SECRET_KEY, algorithms=[settings.ALGORITHM]
         )
-        
         tokenData = TokenPayload(**payload)
 
         if datetime.fromtimestamp(tokenData.exp) < datetime.now():
@@ -37,7 +34,7 @@ async def getCurrentUser(token: str = Depends(reuseableOAuth)) -> User:
                 headers={"WWW-Authenticate": "Bearer"},
             )
     
-    user = await UserService.readUserById(tokenData.sub)
+    user = await UserService.get_users_by_id(tokenData.sub)
 
     if not user:
         raise HTTPException(

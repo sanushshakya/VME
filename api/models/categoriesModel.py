@@ -6,9 +6,9 @@ from typing import List, Optional
 
 
 class Categories(Document):
-    cat_id: UUID = Field(default_factory=uuid4)
-    name: Indexed(str, unique = True)
+    cat_name: Indexed(str, unique = True)
     description: Optional[str] = None
+    image_url: str
 
     @property
     def create(self) -> datetime:

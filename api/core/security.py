@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from typing import Union, Any
 from api.core.config import settings
 from jose import jwt
+from pydantic import EmailStr
 
 password_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

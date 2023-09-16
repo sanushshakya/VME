@@ -10,7 +10,7 @@ from api.api.deps.userDeps import getCurrentUser
 
 authRouter = APIRouter()
 
-@authRouter.post("/login", summary="Create access and refresh token", response_model=TokenSchema)
+@authRouter.post("/login", summary="Create access and refresh token")
 async def login(formData: OAuth2PasswordRequestForm = Depends()) -> Any:
     user = await UserService.authenticate(email = formData.username, password = formData.password)
     if not user:
@@ -18,12 +18,17 @@ async def login(formData: OAuth2PasswordRequestForm = Depends()) -> Any:
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Wrong Credentials"
         )
-    
     return {
         "accessToken": createAccessToken(user.user_id),
-        "refreshToken": createRefreshToken(user.user_id)
+        "refreshToken": createRefreshToken(user.user_id),
     }
-
-@authRouter.post("/test-token", summary="Test if the token is valid", response_model=UserOut)
-async def testToken(user: User = Depends(getCurrentUser)):
+    
+@authRouter.post("/refresh-token", summary="Refresh access token")
+async def refresh_token(refresh_token: str):
+    user = await getCurrentUser(refresh_token)
+    return user
+    
+@authRouter.post("/test-token/{accessToken}", summary="Test if the token is valid")
+async def testToken(accessToken: str):
+    user = await getCurrentUser(accessToken)
     return user

@@ -1,16 +1,20 @@
 from pydantic import Field
-from beanie import Document, Indexed
-from uuid import UUID, uuid4
+from beanie import Document, Indexed, PydanticObjectId
 from datetime import datetime
 from api.models.categoriesModel import Categories
+from typing import Optional
 
 class Events(Document):
-    evt_id: UUID = Field(default_factory=uuid4)
-    title: Indexed(str, unique = True)
-    description: str
+    evt_name: str
     date: str
-    category: Categories
-    organiser: str
+    location: str
+    cat_name: str
+    deadline: str
+    sub_title:str
+    description: str
+    image_url: Optional[str]
+    user_id: PydanticObjectId = None
+    status: str = Field(default="pending")
 
     @property
     def create(self) -> datetime:
