@@ -1,4 +1,4 @@
-#Imports
+# Imports
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from beanie import init_beanie
@@ -34,14 +34,14 @@ app.add_middleware(
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-#Startup Event
+# Startup Event
 @app.on_event("startup")
 async def startup_db_client():
     db_client = AsyncIOMotorClient(settings.DB_URL).vme
 
     await init_beanie(
-        database = db_client,
-        document_models= [
+        database=db_client,
+        document_models=[
             User,
             Role,
             Categories,
@@ -50,18 +50,19 @@ async def startup_db_client():
         ]
     )
 
-#Shutdown Event
-# @app.on_event("shutdown")
-# async def shutdown_db_client():
-#     db_client.close()
+# Shutdown Event
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    db_client = AsyncIOMotorClient(settings.DB_URL)
+    db_client.close()
 
-#include our  API router
-app.include_router(router,prefix=settings.APP_NAME)
+# Include our API router
+app.include_router(router, prefix=settings.APP_NAME)
 
 if __name__ == "__main__":
     uvicorn.run(
-        "main:app", 
+        "main:app",
         host=settings.HOST,
         port=settings.PORT,
         reload=settings.DEBUG_MODE
-        )
+    )
