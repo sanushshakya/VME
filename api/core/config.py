@@ -3,6 +3,7 @@ from pydantic import AnyHttpUrl
 from pydantic_settings import BaseSettings
 from decouple import config
 from typing import List
+import os
 
 #Define CommomnSetting class (inherit from BaseSetting)
 class CommonSettings(BaseSettings):
@@ -27,7 +28,8 @@ class ServerSettings(BaseSettings):
 
 #Define the DatabaseSetting class (inherits from BaseSetting)
 class DatabaseSettings(BaseSettings):
-    DB_URL: str = "mongodb://localhost:27017/?directConnection=true"
+    # DB_URL: str = "mongodb://localhost:27017/?directConnection=true"
+    DB_URL: str = config("MONGO_URI")
     DB_NAME: str = "VME"
 
 #MainSetting class that includes all the setting classes

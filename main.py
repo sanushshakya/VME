@@ -21,7 +21,9 @@ app = FastAPI(
 # Set up CORS
 origins = [
     "http://localhost",
-    "http://localhost:5173"  # replace with your frontend URL
+    "http://localhost:5173",
+    "https://vmebackend-6le5bb7g2-muffin-s-projects-dfe1d0cc.vercel.app",
+    "https://vme-chi.vercel.app"
 ]
 
 app.add_middleware(
